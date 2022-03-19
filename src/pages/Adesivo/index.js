@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FormPagamento from "../../components/FormPagamento";
 import FormPacote from "../../components/FormPacote";
+import FormCartao from "../../components/FormCartao";
 
 export default function Adesivo(){
     const [etapa, setEtapa] = useState(1);
@@ -20,6 +21,10 @@ export default function Adesivo(){
 
             {etapa == 2 &&
                 <FormPagamento etapa={etapa} setEtapa={setEtapa} pagamento={pagamento} setPagamento={setPagamento}/>
+            }
+
+            {etapa == 3 &&
+                <FormCartao etapa={etapa} setEtapa={setEtapa}/>
             }
         </main>
     )
