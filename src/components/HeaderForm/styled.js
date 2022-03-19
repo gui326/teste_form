@@ -6,7 +6,7 @@ export const Titulo = styled.h1`
 
     span{
         font-size: 28px;
-        color: #2F3676;
+        color: #2fdf84;
     }
 `;
 

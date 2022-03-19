@@ -16,7 +16,7 @@ export default function FooterForm(props){
                     <Botao
                     onClick={() => props.setEtapa(props.etapa + 1)}
                     >
-                        Próximo
+                        {props.etapa == 4 ? "Confirmar" : "Próximo"}
                     </Botao>
                 </Grid>
             </Grid>
