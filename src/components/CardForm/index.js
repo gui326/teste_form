@@ -9,7 +9,7 @@ export default function CardForm(props){
             </CardArea>
             
             <FooterArea>
-                <FooterForm />
+                <FooterForm etapa={props.etapa} setEtapa={props.setEtapa}/>
             </FooterArea>
         </Area>
     )

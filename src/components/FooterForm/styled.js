@@ -17,3 +17,18 @@ export const Botao = styled(Button)`
     font-weight: 700!important;
     width: 50%;
 `;
+
+export const ArrowBack = styled.img` 
+    transition: all .3s ease-out;
+    border-radius: 50px;
+    cursor: pointer;
+
+    :hover{
+        background: #c6c6c670;
+    }
+
+    :active{
+        outline: 1px solid lightgrey;
+        background: #c6c6c670;
+    }
+`;

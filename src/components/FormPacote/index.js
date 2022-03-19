@@ -28,8 +28,8 @@ export default function FormPacote(props){
 
     return(
         <Container>
-            <CardForm>
-                <HeaderForm />
+            <CardForm etapa={props.etapa} setEtapa={props.setEtapa}>
+                <HeaderForm titulo={"Formulário para compra de "} destaqueTitulo={"Pacote de Adesivos"} imagem="/caixa.png"/>
 
                 <p style={{ marginTop: '2em' }}>Quais adesivos e quantos?</p>
 

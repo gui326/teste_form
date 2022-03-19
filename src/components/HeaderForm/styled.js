@@ -12,6 +12,6 @@ export const Titulo = styled.h1`
 
 export const Imagem = styled.img` 
     position: relative;
-    right: 3em;
-    top: 1em;
+    right: 1.5em;
+    top: 0;
 `;

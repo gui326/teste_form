@@ -2,16 +2,17 @@ import { Grid } from "@mui/material";
 import { Titulo, Imagem } from "./styled";
 
 
-export default function HeaderForm(){
+export default function HeaderForm(props){
     return(
         <Grid container>
             <Grid item md={4}>
                 <Titulo>
-                    Formulário para compra de <span>Pacote de Adesivos</span>
+                    {props.titulo}
+                    <span>{props.destaqueTitulo}</span>
                 </Titulo>
             </Grid>
             <Grid item sx={{ textAlign: "right", paddingRight: 3 }} md={8}>
-                <Imagem width="140" src="/caixa.png"/>
+                <Imagem width="140" src={props.imagem}/>
             </Grid>
         </Grid>
     );
