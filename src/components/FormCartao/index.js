@@ -24,6 +24,17 @@ export default function FormCartao(props){
         }
     } 
 
+    function mCPF(cpf){
+        
+        cpf=cpf.replace(/\D/g,"")
+        cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+        cpf=cpf.replace(/(\d{3})(\d)/,"$1.$2")
+        cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
+        console.log(cpf);
+        props.setCartao({...props.cartao, cpf: cpf});
+        console.log(props.cartao);
+    }
+
     return(
         <>
             <Container>
@@ -44,17 +55,20 @@ export default function FormCartao(props){
                         <Grid item md={2} xs={4}>
                             <Input fullWidth variant="outlined" defaultValue={props.cartao.mes} 
                             onInput={e => props.setCartao({...props.cartao, mes: e.target.value})}
-                            label="Mês" type="number"/>
+                            inputProps={{ maxLength: 2 }}
+                            label="Mês"/>
                         </Grid>
                         <Grid item md={3} xs={4}>
                             <Input fullWidth variant="outlined" defaultValue={props.cartao.ano}
                             onInput={e => props.setCartao({...props.cartao, ano: e.target.value})}
-                            label="Ano" type="number"/>
+                            inputProps={{ maxLength: 4 }}
+                            label="Ano"/>
                         </Grid>
                         <Grid item md={3} xs={4}>
                             <Input fullWidth variant="outlined" defaultValue={props.cartao.cvc}
                             onInput={e => props.setCartao({...props.cartao, cvc: e.target.value})}
-                            label="CVC" type="number"/>
+                            inputProps={{ maxLength: 5 }}
+                            label="CVC"/>
                         </Grid>
                     </Grid>
 
@@ -65,8 +79,9 @@ export default function FormCartao(props){
                             label="Nome"/>
                         </Grid>
                         <Grid item md={3} xs={12}>
-                            <Input fullWidth variant="outlined" defaultValue={props.cartao.cpf}
-                            onInput={e => props.setCartao({...props.cartao, cpf: e.target.value})}
+                            <Input fullWidth variant="outlined" value={props.cartao.cpf}
+                            onInput={e => mCPF(e.target.value)}
+                            inputProps={{ maxLength: 14 }}
                             label="CPF"/>
                         </Grid>
                     </Grid>

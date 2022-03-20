@@ -10,8 +10,7 @@ export const Area = styled.div`
 export const Card = styled.div` 
     overflow: hidden;
     border-radius: 12px;
-    margin: 0 3em;
-
+    
     img{
         width: 100%;
         height: 8em;
@@ -20,6 +19,10 @@ export const Card = styled.div`
 
     img:hover{
         transform: scale(1.2);
+    }
+
+    @media (max-width: 468px){
+        margin: 0 3em;
     }
 `;
 

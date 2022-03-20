@@ -20,7 +20,7 @@ export default function Adesivo(){
         ano: null,
         cvc: null,
         nome: null,
-        cpf: null
+        cpf: ""
     });
 
     return(
