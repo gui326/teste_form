@@ -8,6 +8,10 @@ export const Area = styled.div`
     box-sizing: border-box;
     display: flex;
     border-radius: 0 0 12px 12px;
+
+    @media (max-width: 468px){
+        border-radius: 0;
+    }
 `;
 
 export const Botao = styled(Button)` 
@@ -16,6 +20,10 @@ export const Botao = styled(Button)`
     color: black!important;
     font-weight: 700!important;
     width: 50%;
+
+    @media (max-width: 468px){
+        width: 90%;
+    }
 `;
 
 export const ArrowBack = styled.img` 

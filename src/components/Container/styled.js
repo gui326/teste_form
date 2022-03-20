@@ -5,4 +5,8 @@ export const Area = styled.div`
     align-items: center;
     display: flex;
     margin: 1em 0;
+
+    @media (max-width: 420px){
+        margin: 0;
+    }
 `;

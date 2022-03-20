@@ -46,13 +46,13 @@ export default function FormPacote(props){
                     <p style={{ marginTop: '2em' }}>Quais adesivos e quantos?</p>
 
                     <Grid container spacing={4}>
-                        <Grid item md={4}>
+                        <Grid item md={4} xs={12}>
                             <CardAdesivo type="react" valor={props.adesivo.react} setValor={changeValueReact}/>
                         </Grid>
-                        <Grid item md={4}>
+                        <Grid item md={4} xs={12}>
                             <CardAdesivo type="vue" valor={props.adesivo.vue} setValor={changeValueVue} />
                         </Grid>
-                        <Grid item md={4}>
+                        <Grid item md={4} xs={12}>
                             <CardAdesivo type="angular" valor={props.adesivo.angular} setValor={changeValueAngular} />
                         </Grid>
                     </Grid>

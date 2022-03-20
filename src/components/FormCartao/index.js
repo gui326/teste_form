@@ -33,7 +33,7 @@ export default function FormCartao(props){
                     <p style={{ marginTop: '2em' }}>Digite os dados do cartão</p>
 
                     <Grid container spacing={4}>
-                        <Grid item md={8}>
+                        <Grid item md={8} xs={12}>
                             <Input fullWidth variant="outlined" defaultValue={props.cartao.numero} 
                             onInput={e => props.setCartao({...props.cartao, numero: e.target.value})}
                             label="Número Cartão"/>
@@ -41,17 +41,17 @@ export default function FormCartao(props){
                     </Grid>
 
                     <Grid mt={1} container spacing={1}>
-                        <Grid item md={2}>
+                        <Grid item md={2} xs={4}>
                             <Input fullWidth variant="outlined" defaultValue={props.cartao.mes} 
                             onInput={e => props.setCartao({...props.cartao, mes: e.target.value})}
                             label="Mês" type="number"/>
                         </Grid>
-                        <Grid item md={3}>
+                        <Grid item md={3} xs={4}>
                             <Input fullWidth variant="outlined" defaultValue={props.cartao.ano}
                             onInput={e => props.setCartao({...props.cartao, ano: e.target.value})}
                             label="Ano" type="number"/>
                         </Grid>
-                        <Grid item md={3}>
+                        <Grid item md={3} xs={4}>
                             <Input fullWidth variant="outlined" defaultValue={props.cartao.cvc}
                             onInput={e => props.setCartao({...props.cartao, cvc: e.target.value})}
                             label="CVC" type="number"/>
@@ -59,12 +59,12 @@ export default function FormCartao(props){
                     </Grid>
 
                     <Grid mt={1} mb={4} container spacing={1}>
-                        <Grid item md={5}>
+                        <Grid item md={5} xs={12}>
                             <Input fullWidth variant="outlined" defaultValue={props.cartao.nome}
                             onInput={e => props.setCartao({...props.cartao, nome: e.target.value})}
                             label="Nome"/>
                         </Grid>
-                        <Grid item md={3}>
+                        <Grid item md={3} xs={12}>
                             <Input fullWidth variant="outlined" defaultValue={props.cartao.cpf}
                             onInput={e => props.setCartao({...props.cartao, cpf: e.target.value})}
                             label="CPF"/>

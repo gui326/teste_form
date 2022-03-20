@@ -10,6 +10,7 @@ export const Area = styled.div`
 export const Card = styled.div` 
     overflow: hidden;
     border-radius: 12px;
+    margin: 0 3em;
 
     img{
         width: 100%;

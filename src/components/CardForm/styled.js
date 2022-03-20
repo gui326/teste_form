@@ -18,4 +18,10 @@ export const Area = styled.div`
     height: 95%;
     border-radius: 12px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 420px){
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
 `;
