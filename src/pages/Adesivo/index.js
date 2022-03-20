@@ -3,6 +3,7 @@ import FormPagamento from "../../components/FormPagamento";
 import FormPacote from "../../components/FormPacote";
 import FormCartao from "../../components/FormCartao";
 import FormConclusao from "../../components/FormConclusao";
+import FormObrigado from "../../components/FormObrigado";
 
 export default function Adesivo(){
     const [etapa, setEtapa] = useState(1);
@@ -30,6 +31,10 @@ export default function Adesivo(){
 
             {etapa == 4 &&
                 <FormConclusao etapa={etapa} setEtapa={setEtapa} pagamento={pagamento} adesivo={adesivo} descricao={descricao} />
+            }
+
+            {etapa == 5 &&
+                <FormObrigado etapa={etapa} />
             }
         </main>
     )

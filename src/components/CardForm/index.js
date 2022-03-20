@@ -8,9 +8,11 @@ export default function CardForm(props){
                 {props.children}
             </CardArea>
             
-            <FooterArea>
-                <FooterForm etapa={props.etapa} setEtapa={props.setEtapa}/>
-            </FooterArea>
+            {props.etapa != 5 &&
+                <FooterArea>
+                    <FooterForm etapa={props.etapa} setEtapa={props.setEtapa}/>
+                </FooterArea>
+            }
         </Area>
     )
 }
