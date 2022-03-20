@@ -13,8 +13,6 @@ export default function CardAdesivo(props){
         }
     }
 
-    console.log('valor', props.valor);
-
     return(
         <Area>
             <Card>

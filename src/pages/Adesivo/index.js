@@ -14,6 +14,14 @@ export default function Adesivo(){
     });
     const [descricao, setDescricao] = useState("");
     const [pagamento, setPagamento] = useState(1); //Pagamento 1: Crédito, 2: Débito e 3: Boleto
+    const [cartao, setCartao] = useState({
+        numero: null,
+        mes: null,
+        ano: null,
+        cvc: null,
+        nome: null,
+        cpf: null
+    });
 
     return(
         <main>
@@ -26,7 +34,7 @@ export default function Adesivo(){
             }
 
             {etapa == 3 &&
-                <FormCartao etapa={etapa} setEtapa={setEtapa}/>
+                <FormCartao etapa={etapa} setEtapa={setEtapa} cartao={cartao} setCartao={setCartao}/>
             }
 
             {etapa == 4 &&
